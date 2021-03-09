@@ -1,0 +1,4 @@
+[submodule "custom-translations"]
+	path = custom-translations
+	url = git@gitlab.com:odoo-si/custom-translations.git
+	branch = 13.0
