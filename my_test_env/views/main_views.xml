@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_my_test_env_form" model="ir.ui.view">
+		<field name="name">my.test.env.form</field>
+		<field name="model">my.test.env</field>
+		<field name="arch" type="xml">
+			<form>
+				<header>
+					<button
+						name="action_test"
+						type="object"
+						string="Check"
+					/>
+				</header>
+				<sheet>
+					<group>
+						<field name="name"/>
+						<field name="description"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="view_my_test_env_tree" model="ir.ui.view">
+		<field name="name">my.test.env</field>
+		<field name="model">my.test.env</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="name"/>
+				<field name="description"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="action_my_test_env" model="ir.actions.act_window">
+		<field name="name">My Test Env</field>
+		<field name="res_model">my.test.env</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	
+	<menuitem
+		id="menu_my_test_env"
+		name="My Test Env"
+		action="action_my_test_env"
+		parent="base.menu_administration"
+		sequence="1001"
+		groups="base.group_user"
+	/>
+</odoo>
